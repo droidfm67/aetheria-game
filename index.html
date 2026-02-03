@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Аэтерия — Выбор</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="selection-screen">
+  <h1>⚔️ Добро пожаловать в Аэтерию</h1>
+  <p>Выбери свою расу и класс</p>
+
+  <div class="section">
+    <h2>Раса</h2>
+    <div class="grid" id="races">
+      <div class="option" data-value="orc">
+        <img src="https://via.placeholder.com/80/CC0000/FFFFFF?text=👹" alt="Орк" />
+        <span>Орк</span>
+      </div>
+      <div class="option" data-value="elf">
+        <img src="https://via.placeholder.com/80/00CC00/FFFFFF?text=🧝" alt="Эльф" />
+        <span>Эльф</span>
+      </div>
+      <div class="option" data-value="lizard">
+        <img src="https://via.placeholder.com/80/009966/FFFFFF?text=🦎" alt="Ящер" />
+        <span>Ящер</span>
+      </div>
+      <div class="option" data-value="abyss">
+        <img src="https://via.placeholder.com/80/660066/FFFFFF?text=👁️" alt="Бездна" />
+        <span>Бездна</span>
+      </div>
+      <div class="option" data-value="golem">
+        <img src="https://via.placeholder.com/80/999999/FFFFFF?text=🤖" alt="Голем" />
+        <span>Голем</span>
+      </div>
+      <div class="option" data-value="aquatic">
+        <img src="https://via.placeholder.com/80/0066CC/FFFFFF?text=🐙" alt="Подводный" />
+        <span>Подводный</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Класс</h2>
+    <div class="grid" id="classes">
+      <div class="option" data-value="mage">
+        <img src="https://via.placeholder.com/80/6633FF/FFFFFF?text=🔮" alt="Маг" />
+        <span>Маг</span>
+      </div>
+      <div class="option" data-value="warrior">
+        <img src="https://via.placeholder.com/80/CC6600/FFFFFF?text=⚔️" alt="Воин" />
+        <span>Воин</span>
+      </div>
+      <div class="option" data-value="archer">
+        <img src="https://via.placeholder.com/80/339933/FFFFFF?text=🏹" alt="Лучник" />
+        <span>Лучник</span>
+      </div>
+      <div class="option" data-value="priest">
+        <img src="https://via.placeholder.com/80/FFCC00/000000?text=✨" alt="Жрец" />
+        <span>Жрец</span>
+      </div>
+    </div>
+  </div>
+
+  <button id="start-game" disabled>🎮 Начать игру</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

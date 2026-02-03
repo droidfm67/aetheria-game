@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Аэтерия — Битва</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="battlefield">
+    <div class="card player">
+      <img src="" class="avatar" id="player-avatar" />
+      <div class="name" id="player-name">Ты: </div>
+      <div class="hp">
+        <label>HP</label>
+        <div class="bar"><span id="player-hp">120</span>/120</div>
+        <div class="health-bar" id="player-health-bar"></div>
+      </div>
+      <div class="mp">
+        <label>MP</label>
+        <div class="bar"><span id="player-mp">80</span>/100</div>
+        <div class="mana-bar" id="player-mana-bar"></div>
+      </div>
+    </div>
+
+    <div class="card enemy">
+      <img src="https://via.placeholder.com/120/F44336/FFFFFF?text=👹" class="avatar" />
+      <div class="name">Тролль</div>
+      <div class="hp">
+        <label>HP</label>
+        <div class="bar"><span id="enemy-hp">150</span>/150</div>
+        <div class="health-bar" id="enemy-health-bar"></div>
+      </div>
+      <div class="mp">
+        <label>MP</label>
+        <div class="bar">0/100</div>
+        <div class="mana-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button onclick="attack()">🗡️ Удар</button>
+    <button onclick="fireball()">🔥 Огненный шар</button>
+  </div>
+
+  <div id="fireball-animation" class="hidden"></div>
+  <div id="slash-animation" class="hidden"></div>
+
+  <script src="script.js"></script>
+  <script>
+    const player = JSON.parse(localStorage.getItem("player")) || { race: "elf" };
+    document.getElementById("player-name").textContent = "Ты: " + player.race;
+    document.getElementById("player-avatar").src = document.querySelector([data-race-img="${player.race}"])?.src || "https://via.placeholder.com/120/00CC00/FFFFFF?text=🧝";
+  </script>
+</body>
+</html>
